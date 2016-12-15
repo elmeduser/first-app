@@ -1,4 +1,20 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</html>
+       <head>
+           <title>My blog</title>
+       </head>
+       <body>
+            <h1>My first blog</h1>
+            <div>
+              {% for post in posts %}
+                <div>
+                  <p>published: {{ post.published_date }}</p>
+                  <h1><a href="">{{ post.title}}</a></h1>
+                  <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+              {% endfor %}
+            </div>
+           <div>
+             {{posts}}
+           </div>
+       </body>
+   </html>
